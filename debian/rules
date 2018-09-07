@@ -1,13 +1,9 @@
 #!/usr/bin/make -f
 
-include /usr/share/pkg-kde-tools/qt-kde-team/3/debian-qt-kde.mk
+%:
+	dh $@ --parallel --with sodeps
 
 override_dh_auto_configure:
 	qmake -makefile
 
-override_dh_auto_test:
-	# Disable dh_auto_test at build time
-	:
-
-override_dh_strip:
-	$(overridden_command) --dbgsym-migration='mycroft-skill-installer-dbg (<= 4:16.12.1-1~~)'
+.PHONY: override_dh_auto_test
