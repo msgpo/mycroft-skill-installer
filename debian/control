@@ -24,6 +24,7 @@ Depends: ${misc:Depends},
          ${shlibs:Depends},
          qml-module-qtquick-controls,
          qml-module-qtquick-controls2,
+         qml-module-qmltermwidget,
          qml-module-qtquick-templates2
 Description: Mycroft skill installer
  Mycroft skill installer allows to install skill
