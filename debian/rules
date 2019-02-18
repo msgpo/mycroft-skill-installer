@@ -3,7 +3,4 @@
 %:
 	dh $@ --parallel --with sodeps
 
-override_dh_auto_configure:
-	qmake -makefile
-
 .PHONY: override_dh_auto_test
