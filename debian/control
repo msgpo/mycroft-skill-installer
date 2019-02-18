@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Build-Depends: cmake,
                debhelper (>= 9),
+               kirigami2-dev,
                libkf5declarative-dev,
                libqt5opengl5-dev (>= 5.6.0~),
                libx11-dev,
