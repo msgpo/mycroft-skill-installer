@@ -3,16 +3,16 @@ Section: kde
 Priority: optional
 Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Build-Depends: debhelper (>= 9),
-               qttools5-dev-tools (>= 5.6.0~),
+               libkf5declarative-dev,
                libqt5opengl5-dev (>= 5.6.0~),
-               qt5-default,
-               qttools5-dev,
-               qttools5-dev-tools,
                libx11-dev,
                pkg-kde-tools (>= 0.15.16~),
+               qt5-default,
                qtbase5-dev (>= 5.4),
-               libkf5declarative-dev,
-               qtquickcontrols2-5-dev
+               qtquickcontrols2-5-dev,
+               qttools5-dev,
+               qttools5-dev-tools,
+               qttools5-dev-tools (>= 5.6.0~)
 Standards-Version: 3.9.8
 Homepage: https://github.com/AIIX/MycroftSkillInstaller/
 Vcs-Browser: https://github.com/AIIX/MycroftSkillInstaller/
@@ -20,14 +20,13 @@ Vcs-Git: https://github.com/AIIX/MycroftSkillInstaller/
 
 Package: mycroft-skill-installer
 Architecture: any
-Depends: ${misc:Depends},
-         ${shlibs:Depends},
+Depends: qml-module-qmltermwidget,
          qml-module-qtquick-controls,
          qml-module-qtquick-controls2,
-         qml-module-qmltermwidget,
-         qml-module-qtquick-templates2
+         qml-module-qtquick-templates2,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: Mycroft skill installer
  Mycroft skill installer allows to install skill
  .
  Mycroft skill installer allows to install skill on device.
-
